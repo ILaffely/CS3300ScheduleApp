@@ -19,7 +19,7 @@ class EventType (models.Model):
     
     
     def get_absolute_url(self):
-        return reverse('EventType-detail', args=[str(self.id)]) 
+        return reverse('eventeype-detail', args=[str(self.id)]) 
     
 
 
@@ -29,10 +29,11 @@ class Event(models.Model):
     date = models.DateField(blank=True, null=True)
     start_time = models.TimeField(blank=True, null=True)
     end_time = models.TimeField(blank=True, null=True)
+    description = models.TextField(blank=True)
     
     # Default String
     def __str__(self):
         return self.name
     
     def get_absolute_url(self):
-        return reverse('Event-detail', args=[str(self.id)])
+        return reverse('event-detail', args=[str(self.id)])
