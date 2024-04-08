@@ -1,0 +1,22 @@
+<!-- inherit from base.html-->
+{% extends "schedrule_app/base_template.html" %}
+
+{% block content %}
+    <h1>Events</h1>
+    {% if events%}
+        <ul>
+            {%for event in events%}
+            <li>
+                <a href= "{{ event.get_absolute_url }}"> {{event.name}}</a>
+                <p>On: {{event.date}} ---- <strong>From: </strong>{{event.start_time}} <strong>To: </strong> {{event.end_time}}</p>
+            </li>
+            {%endfor%}
+        </ul>
+    {%else%}
+        <p> There are currently no events </p>
+    {%endif%}
+
+    <a href="{% url 'create-event' %}" > Create New Event </a>
+    
+
+{% endblock %}
