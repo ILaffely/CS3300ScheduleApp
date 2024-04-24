@@ -4,8 +4,8 @@
   <h1>{{ event.name }}</h1>
 
 
-  <p><strong>Date:</strong> {{ event.date }}</p>
-  <p><strong>From:</strong> {{ event.start_time }}  <strong>To: </strong> {{ event.end_time }}  </p>
+  <p><strong>Date:</strong> {{event.start_date_time.month}}/{{event.start_date_time.day}}</p>
+  <p><strong>From:</strong> {{ event.start_date_time.hour }}:{{event.start_date_time.minute}}   <strong>To: </strong> {{ event.end_date_time.hour }}:{{event.end_date_time.minute}}  </p>
   <p><strong>Description:</strong> {{event.description}}</p>
   <p><strong>Type:</strong> {{event.type.name}}</p>
 

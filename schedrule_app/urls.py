@@ -9,6 +9,7 @@ urlpatterns = [
 # name='index' parameter is to dynamically create url
 # example in html <a href="{% url 'index' %}">Home</a>.
 path('', views.index, name='index'),
+path("calendar/", views.CalendarView.as_view(), name='calendar'),
 path("events/", EventListView.as_view(), name= 'events'),
 path('events/<int:pk>', views.EventDetailView.as_view(), name='event-detail'),
 path("events/create/", views.EventCreateView.as_view(), name='create-event'),

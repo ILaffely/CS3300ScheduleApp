@@ -4,10 +4,10 @@ from django.urls import reverse
 
 class EventType (models.Model):
     COLOR = (
-        ('Blue', 'Blue'),
-        ('Red', 'Red'),
-        ('Green', 'Green'),
-        ('Yellow', 'Yellow')
+        ('blue', 'blue'),
+        ('red', 'red'),
+        ('green', 'green'),
+        ('yellow', 'yellow')
     ) 
     name = models.CharField(max_length = 50)
     color = models.CharField(max_length=200, choices=COLOR, blank = True)
@@ -25,10 +25,9 @@ class EventType (models.Model):
 
 class Event(models.Model):
     type = models.ForeignKey(EventType, on_delete=models.CASCADE, default=None)
-    name = models.CharField(max_length=200)
-    date = models.DateField(blank=True, null=True)
-    start_time = models.TimeField(blank=True, null=True)
-    end_time = models.TimeField(blank=True, null=True)
+    name = models.CharField(max_length=200,blank = True, null = True)
+    start_date_time = models.DateTimeField(blank = True, null = True)
+    end_date_time = models.DateTimeField(blank = True, null = True)
     description = models.TextField(blank=True)
     
     # Default String

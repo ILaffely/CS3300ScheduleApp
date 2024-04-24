@@ -8,7 +8,8 @@
             {%for event in events%}
             <li>
                 <a href= "{{ event.get_absolute_url }}"> {{event.name}}</a>
-                <p>On: {{event.date}} ---- <strong>From: </strong>{{event.start_time}} <strong>To: </strong> {{event.end_time}}</p>
+                <p>On:<strong>Date:</strong> {{event.start_date_time.month}}/{{event.start_date_time.day}} -----  <strong>From:</strong> {{ event.start_date_time.hour }}:{{event.start_date_time.minute}}   
+                    <strong>To: </strong> {{ event.end_date_time.hour }}:{{event.end_date_time.minute}}  </p>
             </li>
             {%endfor%}
         </ul>
