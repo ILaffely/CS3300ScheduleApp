@@ -2,8 +2,11 @@
 
 .calendar {
     width: 75%;
-    margin: auto;
+    height: 50%;
+    margin: 50px;
     font-size: 13px;
+    font-family: "Times New Roman", Times, serif;
+    border: 5px solid darkgreen;
   }
   
   .calendar tr, .calendar td {

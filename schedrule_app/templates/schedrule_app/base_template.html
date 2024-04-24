@@ -26,10 +26,9 @@
          </button>
          <div class="collapse navbar-collapse" id="navbarNav">
            <div class="navbar-nav">
-             <!--  {% url 'index' %}  is defined in url path to dynamically create url -->
+             <!--  {% url 'calendar' %}  is defined in url path to dynamically create url -->
              <a class="nav-link active" aria-current="page" href="{% url 'calendar' %}">Home</a>
              <a class="nav-link" href="{%url 'events' %}" >Events</a>
-             <a class="nav-link" href="#">Menu 3</a>
              {% if user.is_authenticated %}
                
              {% else %}
