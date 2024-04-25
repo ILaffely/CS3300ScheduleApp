@@ -19,8 +19,8 @@ class EventDetailView(DetailView):
     
 class EventCreateView(CreateView):
     model = Event
-    
     fields = ['type','name','start_date_time', 'end_date_time', 'description']
+    success_url = "/events"
 
 class EventUpdateView(UpdateView):
     model = Event
