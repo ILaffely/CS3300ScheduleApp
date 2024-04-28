@@ -27,7 +27,7 @@ def registerPage(request):
             username = form.cleaned_data.get('username')
             group = Group.objects.get(name='manager')
             user.groups.add(group)
-            manager = Manager.objects.create(user=user)
+            manager = Manager.objects.create()
             manager.name = username
             manager.save()
     
