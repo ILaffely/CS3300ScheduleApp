@@ -1,0 +1,7 @@
+<!-- inherit from base.html -->
+{% extends 'schedrule_app/base_template.html' %}
+
+{% block content %}
+  <p>Logged out!</p>
+  <a href="{% url 'calendar' %}">Click here to return to the home page.</a>
+{% endblock %}
