@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'schedrule_app',
+    'schedrule_app','selenium',
 ]
 
 # Add support for authenticating users
